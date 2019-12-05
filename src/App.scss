@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Permanent+Marker&amp;display=swap);
+
+body {
+  background: rgb(2,0,36);
+  background: -moz-linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(94,3,163,1) 35%, rgba(128,33,164,1) 100%);
+  background: -webkit-linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(94,3,163,1) 35%, rgba(128,33,164,1) 100%);
+  background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(94,3,163,1) 35%, rgba(128,33,164,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#8021a4",GradientType=1);
+  min-height: 100vh;
+  width: 100%;
+}
+
+.fancy-font {
+  font-family: 'Permanent Marker', cursive;
+}
+
+
+.nav {
+  background-color: #E6E6E6;
+  color: black;
+}
+
+a.nav-link {
+  color: black !important;
+  
+  &:hover { color:lighten(black, 30%) !important; background-color: darken(white, 40%) !important;}
+}
+
+$primary: #7851a9;
+$info: lighten($primary, 20%);
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
