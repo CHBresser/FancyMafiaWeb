@@ -31,3 +31,40 @@ $info: lighten($primary, 20%);
 
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index.scss';
+
+.navbar-brand {
+  & > img {
+    height: 50px;
+    width: 50px;
+  }
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2rem;
+}
+
+.nav-link {
+  position: relative;
+}
+@include media-breakpoint-up(lg) {
+  .nav-link.router-link-exact-active::after {
+    content: '';
+    width: 90%;
+    height: 5px;
+    background-color: $primary;
+    position: absolute;
+    bottom: calc(-50% + 5px);
+    left: 50%;
+    margin-left: -45%;
+  }
+}
+
+.clearfix:after {
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+.clearfix {display:inline-block;}
+/* Hide from IE Mac \*/
+    .clearfix {display:block;}
+/* End hide from IE Mac */
